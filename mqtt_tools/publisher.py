@@ -3,7 +3,7 @@ import sys
 import paho.mqtt.client as mqtt
 
 class Publisher:
-	def __init__():
+	def __init__(hostname = "localhost", port = 1833, keep_alive = 60):
 		self.client = mqtt.Client()
 		self.hostname = hostname
 		self.port = port
