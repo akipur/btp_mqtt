@@ -3,12 +3,11 @@ import sys
 import paho.mqtt.client as mqtt
 
 class Subscriber:
-	def __init__(self, hostname = "localhost", port = 1883, keep_alive = 60, message_handling = None):
+	def __init__(self, hostname = "localhost", port = 1883, keep_alive = 60):
 		self.client = mqtt.Client()
 		self.hostname = hostname
 		self.port = port
 		self.keep_alive = keep_alive
-		self.client.on_message = message_handling
 
 	def subscribe_to(self, topic = ""):
 		self.client.subscribe(topic)
