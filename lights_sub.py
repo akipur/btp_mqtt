@@ -14,6 +14,5 @@ led = LED(18)
 led.on()
 subscribed_channel = Subscriber()
 subscribed_channel.client.on_message = on_message
-subscribed_channel.subscribe_to("light_control")
 subscribed_channel.connect()
-
+subscribed_channel.subscribe_to("light_control")
