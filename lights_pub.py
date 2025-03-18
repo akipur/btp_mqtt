@@ -1,9 +1,8 @@
 from mqtt_tools.publisher import Publisher
 
-mqtt_broker_address = "192.168.1.195"
 mqtt_channel = "light_control"
 
-publisher = Publisher(hostname = mqtt_broker_address)
+publisher = Publisher()
 publisher.connect()
 
 while True:
