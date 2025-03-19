@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 
 class Subscriber:
     def __init__(self, hostname="mqtt.eclipseprojects.io", port=1883, keep_alive=60):
-        self.client = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
+        self.client = mqtt.Client()
         self.hostname = hostname
         self.port = port
         self.keep_alive = keep_alive
