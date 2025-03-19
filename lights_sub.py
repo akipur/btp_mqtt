@@ -15,7 +15,7 @@ class LED_control(Subscriber):
 
 led = LED(18)
 led.on()
-subscriber = LED_Control()
+subscriber = LED_control()
 subscriber.connect()
 subscriber.subscribe("light_control")
 
