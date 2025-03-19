@@ -15,7 +15,7 @@ class LED_control(Subscriber):
 
 led = LED(18)
 led.on()
-subscriber = LED_control()
+subscriber = LED_control(hostname = "192.168.1.124")
 subscriber.connect()
-subscriber.subscribe("light_control")
+subscriber.subscribe_to("light_control")
 

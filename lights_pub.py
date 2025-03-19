@@ -2,7 +2,7 @@ from mqtt_tools.publisher import Publisher
 
 mqtt_channel = "light_control"
 
-publisher = Publisher()
+publisher = Publisher(hostname = "localhost")
 publisher.connect()
 
 while True:
