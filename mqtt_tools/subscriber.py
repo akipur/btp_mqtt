@@ -43,8 +43,8 @@ class Subscriber:
 			self.client.connect(self.hostname, self.port, self.keep_alive)
 			print(f"Connected to broker at {self.hostname}:{self.port}")
 			self.client.loop_forever()
-		except:
-			print("Unable to connect to host")
+		except Exception as error:
+			print(f"Unable to connect to host due to {error}")
 
 	def disconnect(self):
 		try:
